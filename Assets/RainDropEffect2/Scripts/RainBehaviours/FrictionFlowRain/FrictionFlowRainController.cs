@@ -64,6 +64,16 @@ public class FrictionFlowRainController : MonoBehaviour
 
     public List<FrictionFlowRainDrawerContainer> drawers = new List<FrictionFlowRainDrawerContainer>();
 
+    Transform _dummy;
+    Transform dummy
+    {
+        get
+        {
+            if (!_dummy)
+                _dummy = RainDropTools.CreateHiddenObject("dummy", this.transform);
+            return _dummy;
+        }
+    }
 
     /// <summary>
     /// Refresh this instance.
@@ -312,16 +322,61 @@ public class FrictionFlowRainController : MonoBehaviour
 
     private Vector3 GetNextPositionWithFriction(FrictionFlowRainDrawerContainer dc, float downValue, int resolution, int widthResolution, float dt)
     {
+        dummy.parent = dc.Drawer.transform.parent;
+        dummy.localRotation = dc.Drawer.transform.localRotation;
+        dummy.localPosition = dc.Drawer.transform.localPosition;
+
         int texW = Variables.FrictionMap.width;
         int texH = Variables.FrictionMap.height;
         int iter = (int)(Mathf.Max(2, resolution * dt));
-        Vector3 frictionWay = dc.Drawer.transform.localPosition;
+        //Vector3 frictionWay = dc.Drawer.transform.localPosition;
         Dictionary<Vector3, float> widthPixels = new Dictionary<Vector3, float>();
 
+        // Get the gravity forced vector
         Vector3 downward = RainDropTools.GetGForcedScreenMovement(this.camera.transform, this.GForceVector);
         downward = downward.normalized;
 
+        float angl = Mathf.Rad2Deg * Mathf.Atan2(downward.y, downward.x);
+        Quaternion rot = Quaternion.AngleAxis(angl + 90f, Vector3.forward);
+        Quaternion localrot = rot;
+        dummy.localPosition += downValue * new Vector3(downward.x, downward.y, 0f);
+        dummy.localRotation = localrot;
+
+        float step = (.15f / iter) / widthResolution;
+        int resol = 2 * widthResolution;
+
         for (int i = 0; i < iter; i++)
+        {
+            dummy.localPosition += downValue * (.15f / iter) * Vector3.down;
+
+            for (int j = 0; j <= resol; j++)
+            {
+                float ww = (j * step - (resol / 2) * step);
+                Vector3 downPos = dummy.TransformPoint(new Vector3(ww, 0f, 0f));
+                Vector3 downVector2viewPoint = this.camera.WorldToViewportPoint(downPos);
+
+                // Get the pixel grayscale
+                float pixel = Variables.FrictionMap.GetPixel(
+                    (int)(texW * downVector2viewPoint.x),
+                    (int)(texH * -downVector2viewPoint.y)
+                ).grayscale;
+
+                // If never added to the list, we add it
+                if (!widthPixels.ContainsKey(downPos))
+                {
+                    widthPixels.Add(downPos, 1.0f - pixel);
+                }
+            }
+        }
+        
+        Vector3 frictionWay = PickRandomWeightedElement(widthPixels).Key;
+        frictionWay = dc.Drawer.transform.parent.InverseTransformPoint(frictionWay);
+        dummy.parent = null;
+
+        return frictionWay;
+
+        // OLD
+        /*for (int i = 0; i < iter; i++)
         {
             float dv = downValue * ((float)i / iter);
             widthPixels.Clear();
@@ -350,7 +405,7 @@ public class FrictionFlowRainController : MonoBehaviour
             frictionWay = keyVector;
         }
 
-        return frictionWay;
+        return frictionWay;*/
     }
 
 
