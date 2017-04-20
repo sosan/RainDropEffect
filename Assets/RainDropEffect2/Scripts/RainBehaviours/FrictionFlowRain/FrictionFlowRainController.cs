@@ -337,21 +337,20 @@ public class FrictionFlowRainController : MonoBehaviour
         downward = downward.normalized;
 
         float angl = Mathf.Rad2Deg * Mathf.Atan2(downward.y, downward.x);
-        Quaternion rot = Quaternion.AngleAxis(angl + 90f, Vector3.forward);
-        Quaternion localrot = rot;
-        dummy.localPosition += downValue * new Vector3(downward.x, downward.y, 0f);
-        dummy.localRotation = localrot;
 
-        float step = (.15f / iter) / widthResolution;
+        //dummy.localPosition += downValue * new Vector3(downward.x, downward.y, 0f);
+        dummy.localRotation = Quaternion.AngleAxis(angl + 90f, Vector3.forward);
+
+        float step = downValue * (1f / iter) / widthResolution;
         int resol = 2 * widthResolution;
 
         for (int i = 0; i < iter; i++)
         {
-            dummy.localPosition += downValue * (.15f / iter) * Vector3.down;
+            dummy.localPosition += downValue * (1f / iter) * new Vector3(downward.x, downward.y, 0f);
 
             for (int j = 0; j <= resol; j++)
             {
-                float ww = (j * step - (resol / 2) * step);
+                float ww = (j * step - (resol / 2f) * step);
                 Vector3 downPos = dummy.TransformPoint(new Vector3(ww, 0f, 0f));
                 Vector3 downVector2viewPoint = this.camera.WorldToViewportPoint(downPos);
 
