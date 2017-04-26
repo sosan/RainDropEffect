@@ -179,6 +179,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 0.23
   VRMode: 1
@@ -198,6 +199,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 1
   Distance: 0.23
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -207,7 +209,7 @@ MonoBehaviour:
     AutoRotate: 1
     Duration: 1
     Delay: 0
-    MaxRainSpawnCount: 20
+    MaxRainSpawnCount: 11
     SpawnOffsetY: 0.05
     LifetimeMin: 0.73
     LifetimeMax: 0.91
@@ -373,7 +375,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-    DistortionValue: 65
+    DistortionValue: 19
     DistortionOverLifetime:
       serializedVersion: 2
       m_Curve:
@@ -507,15 +509,33 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -0.012371659
+        value: 0.00000011920929
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.99345607
-        value: -0.033424564
-        inSlope: 0
-        outSlope: 0
+        time: 0.080093235
+        value: -0.043233514
+        inSlope: -0.0045793676
+        outSlope: -0.0045793676
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.20815253
+        value: -0.0011205457
+        inSlope: -0.012412271
+        outSlope: -0.012412271
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.45308065
+        value: -0.0036242213
+        inSlope: -0.033332076
+        outSlope: -0.033332076
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.987398
+        value: -0.033374462
+        inSlope: -0.10216767
+        outSlope: -0.10216767
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -537,6 +557,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 1
   Distance: 0.23
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -546,7 +567,7 @@ MonoBehaviour:
     FrictionMap: {fileID: 2800000, guid: b78240cfb5d9b854ea43a15802177238, type: 3}
     Duration: 1
     Delay: 0
-    MaxRainSpawnCount: 10
+    MaxRainSpawnCount: 14
     SpawnOffsetY: 0.22
     LifetimeMin: 1.94
     LifetimeMax: 2.19
@@ -686,6 +707,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 1
   Distance: 0.23
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     FullScreen: 1

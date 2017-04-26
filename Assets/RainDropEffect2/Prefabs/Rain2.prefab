@@ -168,6 +168,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 8.3
   VRMode: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -276,76 +278,76 @@ MonoBehaviour:
         outSlope: 0.24568331
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.26817292
+        time: 0.17156616
         value: 1.0002745
         inSlope: 0.07510185
         outSlope: 0.07510185
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.3343966
-        value: 0.97179145
-        inSlope: -0.088214874
-        outSlope: -0.088214874
+        time: 0.20838778
+        value: 0.97806454
+        inSlope: 0.5358395
+        outSlope: 0.5358395
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.41536382
-        value: 0.99567324
+        time: 0.24315175
+        value: 1.0019463
         inSlope: 0.1731515
         outSlope: 0.1731515
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.4681438
-        value: 0.96175915
+        time: 0.28333086
+        value: 0.9805784
         inSlope: -0.07271767
         outSlope: -0.07271767
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.5323978
-        value: 0.983025
+        time: 0.31818283
+        value: 0.9955712
         inSlope: -0.030696392
         outSlope: -0.030696392
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.60893947
-        value: 0.83649653
+        time: 0.3821236
+        value: 0.9807775
         inSlope: 0.0058703087
         outSlope: 0.0058703087
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.67425853
-        value: 0.84805477
+        time: 0.42224088
+        value: 0.97351646
         inSlope: -0.04986841
         outSlope: -0.04986841
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.72092986
-        value: 0.75168484
+        time: 0.4773128
+        value: 0.9524236
         inSlope: 0.081355646
         outSlope: 0.081355646
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.7805341
-        value: 0.7736056
-        inSlope: -0.084859796
-        outSlope: -0.084859796
+        time: 0.57892
+        value: 0.8990673
+        inSlope: -0.49505067
+        outSlope: -0.49505067
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.82617384
-        value: 0.6966939
-        inSlope: -0.060167275
-        outSlope: -0.060167275
+        time: 0.6413609
+        value: 0.8911596
+        inSlope: -0.43054444
+        outSlope: -0.43054444
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.87614584
-        value: 0.61853874
+        time: 0.7459367
+        value: 0.80673134
         inSlope: -0.30664837
         outSlope: -0.30664837
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.9348415
-        value: 0.617772
-        inSlope: -0.08159968
-        outSlope: -0.08159968
+        time: 0.82143354
+        value: 0.75577986
+        inSlope: -1.0756819
+        outSlope: -1.0756819
         tangentMode: 0
       - serializedVersion: 2
         time: 1.0080706
@@ -495,40 +497,28 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.08555365
-        value: -0.3494715
-        inSlope: -0.098596506
-        outSlope: -0.098596506
+        time: 0.04259711
+        value: -0.95868164
+        inSlope: -0.0045793676
+        outSlope: -0.0045793676
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.2124328
-        value: -0.3729201
-        inSlope: -0.24283955
-        outSlope: -0.24283955
+        time: 0.13316028
+        value: -0.00049554557
+        inSlope: -0.05599556
+        outSlope: -0.05599556
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.3435021
-        value: -0.39692986
-        inSlope: -0.68336725
-        outSlope: -0.68336725
+        time: 0.4364157
+        value: -0.18661055
+        inSlope: -0.7622451
+        outSlope: -0.7622451
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.44719768
-        value: -0.4281583
-        inSlope: -0.18179417
-        outSlope: -0.18179417
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.52187836
-        value: -0.46947294
-        inSlope: -0.9004226
-        outSlope: -0.9004226
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.9966356
-        value: -0.8646759
-        inSlope: 0
-        outSlope: 0
+        time: 0.99989676
+        value: -0.49672353
+        inSlope: 0.0029063239
+        outSlope: 0.0029063239
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -550,6 +540,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -714,6 +705,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     FullScreen: 1

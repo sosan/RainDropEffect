@@ -151,6 +151,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -330,6 +331,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     FullScreen: 1
@@ -377,6 +379,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 8.3
   VRMode: 0

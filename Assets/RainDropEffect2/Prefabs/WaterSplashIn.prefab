@@ -138,6 +138,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 8.3
   VRMode: 0
@@ -157,6 +158,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 0
     PlayOnce: 1
@@ -413,14 +415,14 @@ MonoBehaviour:
       - serializedVersion: 2
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.9430923
+        outSlope: -0.9430923
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.99811554
-        value: 14.974588
-        inSlope: 0
-        outSlope: 0
+        time: 0.9968762
+        value: 31.588915
+        inSlope: 56.62992
+        outSlope: 56.62992
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -442,6 +444,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 0
     PlayOnce: 1

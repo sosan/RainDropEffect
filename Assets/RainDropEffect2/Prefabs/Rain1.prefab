@@ -181,6 +181,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     FullScreen: 1
@@ -230,6 +231,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -379,6 +381,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 1
     PlayOnce: 0
@@ -693,40 +696,28 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.08555365
-        value: -0.17405958
-        inSlope: -3.4878533
-        outSlope: -3.4878533
+        time: 0.22174528
+        value: -0.9526899
+        inSlope: -0.0045793676
+        outSlope: -0.0045793676
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.15412955
-        value: -0.31799617
-        inSlope: -0.24283955
-        outSlope: -0.24283955
+        time: 0.30397597
+        value: -0.012479067
+        inSlope: -0.05599556
+        outSlope: -0.05599556
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.22726949
-        value: -0.41097546
-        inSlope: -0.4320944
-        outSlope: -0.4320944
+        time: 0.4364157
+        value: -0.18661055
+        inSlope: -0.7622451
+        outSlope: -0.7622451
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.3830736
-        value: -0.48714766
-        inSlope: -1.1724008
-        outSlope: -1.1724008
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.5467112
-        value: -0.5672163
-        inSlope: -0.9004226
-        outSlope: -0.9004226
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.9916503
-        value: -0.70895654
-        inSlope: 0
-        outSlope: 0
+        time: 0.99989676
+        value: -0.49672353
+        inSlope: 0.0029063239
+        outSlope: 0.0029063239
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -746,6 +737,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 8.3
   VRMode: 0

@@ -328,7 +328,7 @@ public class FrictionFlowRainController : MonoBehaviour
 
         int texW = Variables.FrictionMap.width;
         int texH = Variables.FrictionMap.height;
-        int iter = (int)(Mathf.Max(2, resolution * dt));
+        int iter = (int)(Mathf.Clamp(resolution * dt, 2, 5));
         //Vector3 frictionWay = dc.Drawer.transform.localPosition;
         Dictionary<Vector3, float> widthPixels = new Dictionary<Vector3, float>();
 
@@ -341,8 +341,8 @@ public class FrictionFlowRainController : MonoBehaviour
         //dummy.localPosition += downValue * new Vector3(downward.x, downward.y, 0f);
         dummy.localRotation = Quaternion.AngleAxis(angl + 90f, Vector3.forward);
 
-        float step = downValue * (1f / iter) / widthResolution;
-        int resol = 2 * widthResolution;
+        float step = downValue * (1f / iter) * 3f / widthResolution;
+        int resol = Mathf.Clamp(2 * widthResolution, 2, 5);
 
         for (int i = 0; i < iter; i++)
         {

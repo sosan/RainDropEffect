@@ -263,6 +263,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 8.3
   VRMode: 0
@@ -282,6 +283,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 0
     PlayOnce: 1
@@ -493,6 +495,7 @@ MonoBehaviour:
   RenderQueue: 3000
   Alpha: 1
   GlobalWind: {x: 0, y: 0}
+  GForceVector: {x: 0, y: -1, z: 0}
   ShaderType: 0
   distance: 8.3
   VRMode: 0
@@ -512,6 +515,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 0
     FullScreen: 1
@@ -678,6 +682,7 @@ MonoBehaviour:
   ShaderType: 0
   VRMode: 0
   Distance: 8.3
+  GForceVector: {x: 0, y: -1, z: 0}
   Variables:
     AutoStart: 0
     PlayOnce: 1
@@ -724,8 +729,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-    SizeMinX: 0.74
-    SizeMaxX: 0.81
+    SizeMinX: 0.3
+    SizeMaxX: 0.3
     TrailWidth:
       serializedVersion: 2
       m_Curve:
@@ -826,6 +831,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 0
     Darkness: 0.82
-    InitialVelocity: 40
+    InitialVelocity: 33
     AccelerationMin: -1.61
-    AccelerationMax: 0.07
+    AccelerationMax: -0.92
