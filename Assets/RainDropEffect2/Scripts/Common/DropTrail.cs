@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+#if !UNITY_5_5_OR_NEWER
+public enum LineTextureMode
+{
+    Stretch,
+    Tile,
+}
+#endif
+
 public class DropTrail : MonoBehaviour
 {
     [System.Serializable]
@@ -31,7 +39,7 @@ public class DropTrail : MonoBehaviour
 	public float widthMultiplier = .5f;
 	public int angleDivisions = 10;
 	public float vertexDistance = .5f;
-	public LineTextureMode textureMode;
+    public LineTextureMode textureMode;
 
 
 	const string _name = "[Hidden]DropTrailMesh";
