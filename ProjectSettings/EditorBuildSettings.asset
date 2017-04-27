@@ -5,19 +5,5 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/tmp/MobileTest/MobileTestScene.unity
-  - enabled: 0
-    path: Assets/Medieval Environment/Demos/Demo2/Scene2.unity
-  - enabled: 0
-    path: Assets/Medieval Environment/Demos/Demo6/Scene6.unity
-  - enabled: 0
-    path: Assets/RainDropEffect2/Demo/MobileDemo.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/RainDropEffect2/Demo/Demo1.unity
-  - enabled: 0
-    path: Assets/RainDropEffect2/Demo/Demo2.unity
-  - enabled: 0
-    path: Assets/OVR/Scenes/Room.unity
-  - enabled: 0
-    path: Assets/OVR/Scenes/Cubes.unity
