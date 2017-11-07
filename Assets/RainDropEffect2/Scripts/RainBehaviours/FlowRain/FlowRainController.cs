@@ -261,6 +261,8 @@ public class FlowRainController : MonoBehaviour
             Variables.OverlayColor,
             Variables.ReliefValue,
             Variables.Blur,
+            Variables.BloomTexture,
+            Variables.Bloom,
             Variables.Darkness
         );
 		dc.Drawer.lifeTime = dc.lifetime;
@@ -337,6 +339,7 @@ public class FlowRainController : MonoBehaviour
         float distortionValue = Variables.DistortionValue * Variables.DistortionOverLifetime.Evaluate(progress) * Alpha;
         float reliefValue = Variables.ReliefValue * Variables.ReliefOverLifetime.Evaluate(progress) * Alpha;
         float blurValue = Variables.Blur * Variables.BlurOverLifetime.Evaluate(progress) * Alpha;
+        float bloomValue = Variables.Bloom * Variables.BloomOverLifetime.Evaluate(progress) * Alpha;
         Color overlayColor = new Color(
             Variables.OverlayColor.r,
             Variables.OverlayColor.g,
@@ -378,6 +381,7 @@ public class FlowRainController : MonoBehaviour
             overlayColor,
             reliefValue,
             blurValue,
+            Variables.BloomTexture,
             Variables.Darkness * Alpha
         );
         dc.Drawer.enabled = true;

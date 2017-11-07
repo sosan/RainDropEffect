@@ -12,10 +12,13 @@ public class SimpleRainVariables {
 	public bool PlayOnce = false;
 
 	public Color OverlayColor = Color.gray;
-	public Texture NormalMap;
+    [Range(0.0f, 5.0f)]
+    public float Darkness;
+
+    public Texture NormalMap;
 	public Texture OverlayTexture;
 
-	public bool AutoRotate = false;
+    public bool AutoRotate = false;
 
 	public float Duration = 1f;
 	public float Delay = 0f;
@@ -60,8 +63,11 @@ public class SimpleRainVariables {
 	public float Blur;
 	public AnimationCurve BlurOverLifetime;
 
-	public AnimationCurve PosYOverLifetime;
+    public Texture BloomTexture;
 
-	[Range(0.0f, 5.0f)]
-	public float Darkness;
+    [Range(0.0f, 20.0f)]
+    public float Bloom;
+    public AnimationCurve BloomOverLifetime;
+
+    public AnimationCurve PosYOverLifetime;
 }

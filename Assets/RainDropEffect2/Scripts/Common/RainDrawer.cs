@@ -45,6 +45,14 @@ namespace RainDropEffect
 
         [HideInInspector]
         [System.NonSerialized]
+        public Texture BloomTexture;
+
+        [HideInInspector]
+        [System.NonSerialized]
+        public float Bloom;
+
+        [HideInInspector]
+        [System.NonSerialized]
         public float Darkness;
 
         [HideInInspector]
@@ -103,7 +111,7 @@ namespace RainDropEffect
                 }
                 else
                 {
-                    if (DistortionStrength == 0f && ReliefValue == 0f && OverlayColor.a == 0f && Blur == 0f)
+                    if (DistortionStrength == 0f && ReliefValue == 0f && OverlayColor.a == 0f && Blur == 0f && Bloom == 0f)
                     {
                         Hide();
                         return;
@@ -160,6 +168,8 @@ namespace RainDropEffect
                     OverlayColor,
                     ReliefValue,
                     Blur,
+                    BloomTexture,
+                    Bloom,
                     Darkness
                 );
             }

@@ -176,6 +176,8 @@ public class StaticRainController : MonoBehaviour
         dc.Drawer.DistortionStrength = Variables.DistortionValue * fadeCurve.Evaluate(progress) * Alpha;
         dc.Drawer.ReliefValue = Variables.ReliefValue * fadeCurve.Evaluate(progress) * Alpha;
         dc.Drawer.Blur = Variables.Blur * fadeCurve.Evaluate(progress) * Alpha;
+        dc.Drawer.BloomTexture = Variables.BloomTexture;
+        dc.Drawer.Bloom = Variables.Bloom * fadeCurve.Evaluate(progress) * Alpha;
         dc.Drawer.Darkness = Variables.Darkness;
         dc.Drawer.ShaderType = ShaderType;
         dc.Drawer.Show();

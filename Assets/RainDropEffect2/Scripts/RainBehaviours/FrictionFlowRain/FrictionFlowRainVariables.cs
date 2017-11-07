@@ -12,9 +12,12 @@ public class FrictionFlowRainVariables {
 	public bool PlayOnce = false;
 
 	public Color OverlayColor = Color.gray;
-	public Texture NormalMap;
+    [Range(0.0f, 5.0f)]
+    public float Darkness;
+
+    public Texture NormalMap;
 	public Texture OverlayTexture;
-	public Texture2D FrictionMap;
+    public Texture2D FrictionMap;
 
 	public float Duration = 1f;
     public float Delay = 0f;
@@ -58,8 +61,11 @@ public class FrictionFlowRainVariables {
 	public float Blur;
 	public AnimationCurve BlurOverLifetime;
 
-	[Range(0.0f, 5.0f)]
-	public float Darkness;
+    public Texture BloomTexture;
+
+    [Range(0.0f, 20.0f)]
+    public float Bloom;
+    public AnimationCurve BloomOverLifetime;
 
 	[Range(-40f, 40f)]
 	public float InitialVelocity = 0.0f;
